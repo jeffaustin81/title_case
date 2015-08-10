@@ -9,13 +9,13 @@
             {
                 // Arrange
                 $test_TitleCaseGenerator = new TitleCaseGenerator;
-                $input = "beowulf";
+                $input = "i";
 
                 //act
                 $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
                 //Assert
-                $this->assertEquals("Beowulf", $result);
+                $this->assertEquals("I", $result);
             }
     }
 
