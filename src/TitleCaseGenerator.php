@@ -1,9 +1,9 @@
 <?php
 class TitleCaseGenerator
 {
-  function makeTitleCase($input_title)
-  {
-    
-  }
+    function makeTitleCase($input_title)
+    {
+        
+    }
 }
 ?>
