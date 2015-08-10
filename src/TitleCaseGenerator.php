@@ -8,7 +8,7 @@ class TitleCaseGenerator
         $prep_con = array("a","an","and","as","at","but","by",
         "en","for","if","in","of","on","or","the","to", "from");
 
-        //
+        //prefixes to check for
         $prefix = array("mc", "o'");
         //Seperates string by space and stores into an array
         $input_array_of_words = explode(" ", strtolower($input_title));
