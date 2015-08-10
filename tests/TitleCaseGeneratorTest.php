@@ -57,6 +57,19 @@
                 $this->assertEquals("Beowulf from Brighton Beach", $result);
             }
 
+            function test_makeTitleCase_firstWord()
+            {
+                // Arrange
+                $test_TitleCaseGenerator = new TitleCaseGenerator;
+                $input = "from brighton beach";
+
+                // Act
+                $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+                // Assert
+                $this->assertEquals("From Brighton Beach", $result);
+            }
+
     }
 
 ?>

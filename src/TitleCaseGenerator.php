@@ -10,6 +10,9 @@ class TitleCaseGenerator
         //Seperates string by space and stores into an array
         $input_array_of_words = explode(" ", $input_title);
 
+        //Grab first index
+        $first_word = ucfirst(array_shift($input_array_of_words));
+
         //Storage array
         $output_titlecased = array();
 
@@ -26,12 +29,13 @@ class TitleCaseGenerator
             }else{
 
                 array_push($output_titlecased, ucfirst($word));
-                
+
             }
 
         }
 
-
+        //Add first word back to array
+        array_unshift($output_titlecased, $first_word);
 
         return implode(" ", $output_titlecased);
 
