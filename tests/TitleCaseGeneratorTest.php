@@ -70,6 +70,20 @@
                 $this->assertEquals("From Brighton Beach", $result);
             }
 
+            function test_makeTitleCase_nonLetter()
+            {
+                // Arrange
+                $test_TitleCaseGenerator = new TitleCaseGenerator;
+                $input = "57 from home";
+
+                // Act
+                $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+                // Assert
+                $this->assertEquals("57 from Home", $result);
+            }
+
+
     }
 
 ?>
