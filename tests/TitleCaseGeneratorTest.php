@@ -83,6 +83,46 @@
                 $this->assertEquals("57 from Home", $result);
             }
 
+            function test_makeTitleCase_toLowerCase()
+            {
+                // Arrange
+                $test_TitleCaseGenerator = new TitleCaseGenerator;
+                $input = "OH YEAH!!";
+
+                // Act
+                $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+                // Assert
+                $this->assertEquals("Oh Yeah!!", $result);
+            }
+
+            function test_makeTitleCase_ignoreMixedCase()
+            {
+                // Arrange
+                $test_TitleCaseGenerator = new TitleCaseGenerator;
+                $input = "oH yEAh!!";
+
+                // Act
+                $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+                // Assert
+                $this->assertEquals("Oh Yeah!!", $result);
+            }
+
+            function test_makeTitleCase_ignorePrefix()
+            {
+                // Arrange
+                $test_TitleCaseGenerator = new TitleCaseGenerator;
+                $input = "here's to beowulf and McDuff and O'Malley.";
+
+                // Act
+                $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+                // Assert
+                $this->assertEquals("Here's to Beowulf and McDuff and O'Malley.", $result);
+            }
+
+
 
     }
 

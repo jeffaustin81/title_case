@@ -34,15 +34,15 @@ It capitalizes designated words if they are the first word
 -------------Fifth Case-----------------------------
 WHAT IT DOES:
 It handles non-letter characters
-        INPUT: 57 beowulf alternative endings!!
-        OUTPUT: 57 Beowulf Alternative Endings!!
+        INPUT: 57 from home
+        OUTPUT: 57 from Home
 
 ------------Sixth Case------------------------------
 WHAT IT DOES:
 It manges all uppercase entries
 
-        INPUT: BEOWULF ON THE ROCKS
-        OUTPUT: Beowulf on the Rocks
+        INPUT: OH YEAH!!
+        OUTPUT: Oh Yeah!!
 
 -----------Seventh case----------------------------
 WHAT IT DOES:

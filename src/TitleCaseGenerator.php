@@ -3,12 +3,15 @@ class TitleCaseGenerator
 {
     function makeTitleCase($input_title)
     {
+
         //Preposition and conjunction array
         $prep_con = array("a","an","and","as","at","but","by",
         "en","for","if","in","of","on","or","the","to", "from");
 
+        //
+        $prefix = array("mc", "o'");
         //Seperates string by space and stores into an array
-        $input_array_of_words = explode(" ", $input_title);
+        $input_array_of_words = explode(" ", strtolower($input_title));
 
         //Grab first index
         $first_word = ucfirst(array_shift($input_array_of_words));
@@ -25,6 +28,18 @@ class TitleCaseGenerator
             if(in_array($word, $prep_con)){
 
                 array_push($output_titlecased, $word);
+
+
+            //Prefix fix
+            }elseif(in_array(substr($word, 0, 2), $prefix)){
+
+
+                $storage = str_split($word);
+                $storage[2] = strtoupper($storage[2]);
+                $storage = implode("", $storage);
+
+                array_push($output_titlecased, ucfirst($storage));
+
 
             }else{
 
@@ -45,3 +60,5 @@ class TitleCaseGenerator
 }
 
 ?>
+
+if substr
