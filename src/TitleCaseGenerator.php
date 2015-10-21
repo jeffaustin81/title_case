@@ -61,4 +61,3 @@ class TitleCaseGenerator
 
 ?>
 
-if substr
